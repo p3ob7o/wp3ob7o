@@ -22,7 +22,7 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Source Serif 4\", \"Iowan Old Style\", \"Palatino Linetype\", Palatino, Georgia, serif",
+					"fontFamily": "\"Source Serif 4\", serif",
 					"name": "Source Serif 4",
 					"slug": "body",
 					"fontFace": [

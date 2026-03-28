@@ -18,7 +18,7 @@
 - **Primary (body + headings):** Source Serif 4 (Frank Griesshammer, Adobe)
 - **Rationale:** Contemporary transitional serif with moderate contrast. Full OpenType support. Variable font. Closest publicly available match to the warmth and proportion of Anthropic Serif. Single typeface for everything (the theme is one voice).
 - **Loading:** Google Fonts CDN via `<link>`, `font-display: swap`
-- **Fallback stack:** `"Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif`
+- **Fallback stack:** `"Source Serif 4", serif`
 
 ### Type Scale
 Tuned by eye per Butterick (no modular scale). Sizes in px, implemented as rem (1rem = 17px body).
