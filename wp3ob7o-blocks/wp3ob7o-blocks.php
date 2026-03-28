@@ -22,5 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function wp3ob7o_blocks_init() {
 	register_block_type( __DIR__ . '/blocks/dark-mode-toggle' );
+	register_block_type( __DIR__ . '/blocks/reading-time' );
 }
 add_action( 'init', 'wp3ob7o_blocks_init' );
