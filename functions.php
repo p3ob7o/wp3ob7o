@@ -15,6 +15,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 function wp3ob7o_enqueue_styles() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
+	// Main stylesheet: dark mode surface switching, skip link,
+	// nav borders, and layout helpers that theme.json can't express.
+	wp_enqueue_style(
+		'wp3ob7o-style',
+		get_stylesheet_uri(),
+		array(),
+		$theme_version
+	);
+
 	wp_enqueue_style(
 		'wp3ob7o-typography',
 		get_theme_file_uri( 'assets/css/typography.css' ),
