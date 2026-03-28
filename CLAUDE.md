@@ -54,6 +54,22 @@ All font choices, colors, spacing, and aesthetic direction are defined there.
 Do not deviate without explicit user approval.
 In QA mode, flag any code that doesn't match DESIGN.md.
 
+## Development Rules
+
+### 1. Everything is blocks
+Every UI element must be a block. Use native core blocks when possible. Register custom blocks when not. Never use `<!-- wp:html -->` for anything that should be a block. No inline HTML hacks.
+
+### 2. Custom blocks live in a companion plugin
+Custom block types (dark-mode-toggle, reading-time, etc.) go in a separate plugin distributed independently from the theme. The theme requires the plugin but doesn't bundle it. Theme = templates, patterns, styles. Plugin = custom block types.
+
+### 3. Strict Gutenberg guidelines
+This theme should be a reference implementation for the site editor. Styles, fonts, and spacing via theme.json. Font loading via theme.json fontFamilies. Block patterns registered properly. Follow developer.wordpress.org documentation as the canonical source.
+
+### CSS
+- Never use `!important`. Debug specificity properly.
+- Use CSS custom properties from theme.json where possible.
+
 ## Git
 - Branch naming: always `main`, never `master`
 - `refs/` is gitignored (large binary assets)
+- Each independent fix gets its own branch
