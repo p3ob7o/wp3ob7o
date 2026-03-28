@@ -32,19 +32,6 @@ function wp3ob7o_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'wp3ob7o_enqueue_styles' );
 
-/**
- * Enqueue Google Fonts — Source Serif 4.
- */
-function wp3ob7o_enqueue_fonts() {
-	wp_enqueue_style(
-		'wp3ob7o-google-fonts',
-		'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap',
-		array(),
-		null
-	);
-}
-add_action( 'wp_enqueue_scripts', 'wp3ob7o_enqueue_fonts' );
-add_action( 'enqueue_block_editor_assets', 'wp3ob7o_enqueue_fonts' );
 
 /**
  * Inject inline dark mode preference script in <head> before paint.
@@ -122,3 +109,12 @@ function wp3ob7o_setup() {
 	add_editor_style( 'assets/css/typography.css' );
 }
 add_action( 'after_setup_theme', 'wp3ob7o_setup' );
+
+/**
+ * Output skip-to-content link via wp_body_open.
+ * This is the canonical WordPress approach for skip links in block themes.
+ */
+function wp3ob7o_skip_link() {
+	echo '<a class="skip-to-content" href="#main-content">' . esc_html__( 'Skip to content', 'wp3ob7o' ) . '</a>';
+}
+add_action( 'wp_body_open', 'wp3ob7o_skip_link' );
