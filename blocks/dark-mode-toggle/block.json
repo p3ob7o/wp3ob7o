@@ -1,11 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "publishing-universe/dark-mode-toggle",
+	"name": "wp3ob7o/dark-mode-toggle",
 	"title": "Dark Mode Toggle",
 	"category": "theme",
 	"description": "A toggle button that switches between light and dark mode.",
-	"textdomain": "publishing-universe",
+	"textdomain": "wp3ob7o",
 	"supports": {
 		"html": false,
 		"align": false

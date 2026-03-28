@@ -3,7 +3,7 @@
  *
  * Handles the toggle button interaction. The preference-reading script
  * that prevents flash-of-wrong-theme runs separately in <head> via
- * functions.php (pu_dark_mode_head_script).
+ * functions.php (wp3ob7o_dark_mode_head_script).
  */
 ( function () {
 	var buttons = document.querySelectorAll( '.dark-mode-toggle' );
@@ -23,7 +23,7 @@
 
 			var isDark = html.classList.contains( 'dark-mode' );
 			try {
-				localStorage.setItem( 'pu-dark-mode', isDark ? 'on' : 'off' );
+				localStorage.setItem( 'wp3ob7o-dark-mode', isDark ? 'on' : 'off' );
 			} catch ( e ) {
 				// Private browsing or storage full — toggle still works per-session
 			}
