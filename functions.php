@@ -32,19 +32,6 @@ function wp3ob7o_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'wp3ob7o_enqueue_styles' );
 
-/**
- * Enqueue Google Fonts — Source Serif 4.
- */
-function wp3ob7o_enqueue_fonts() {
-	wp_enqueue_style(
-		'wp3ob7o-google-fonts',
-		'https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap',
-		array(),
-		null
-	);
-}
-add_action( 'wp_enqueue_scripts', 'wp3ob7o_enqueue_fonts' );
-add_action( 'enqueue_block_editor_assets', 'wp3ob7o_enqueue_fonts' );
 
 /**
  * Inject inline dark mode preference script in <head> before paint.

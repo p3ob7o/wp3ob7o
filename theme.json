@@ -31,27 +31,29 @@
 							"fontWeight": "200 900",
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
-							"src": [ "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200..900&display=swap" ]
+							"src": [ "file:./assets/fonts/source-serif-4-latin.woff2" ]
 						},
 						{
 							"fontFamily": "Source Serif 4",
 							"fontWeight": "200 900",
 							"fontStyle": "italic",
 							"fontDisplay": "swap",
-							"src": [ "https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@1,8..60,200..900&display=swap" ]
+							"src": [ "file:./assets/fonts/source-serif-4-latin-italic.woff2" ]
 						}
 					]
 				}
 			],
 			"fontSizes": [
+				{ "slug": "ui-label", "size": "12px", "name": "UI Label" },
 				{ "slug": "meta", "size": "13px", "name": "Meta" },
 				{ "slug": "small", "size": "15px", "name": "Small" },
-				{ "slug": "medium", "size": "17px", "name": "Body" },
+				{ "slug": "body", "size": "17px", "name": "Body" },
 				{ "slug": "large", "size": "22px", "name": "H2" },
 				{ "slug": "x-large", "size": "28px", "name": "H1" },
 				{ "slug": "xx-large", "size": "clamp(28px, 4vw, 36px)", "name": "Display" }
 			],
-			"fluid": false
+			"fluid": false,
+			"defaultFontSizes": false
 		},
 		"spacing": {
 			"units": [ "px", "rem", "%", "vw" ],
@@ -90,7 +92,7 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--body)",
-			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontSize": "var(--wp--preset--font-size--body)",
 			"lineHeight": "1.45"
 		},
 		"spacing": {
@@ -150,7 +152,7 @@
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontSize": "var(--wp--preset--font-size--body)",
 					"fontWeight": "600"
 				}
 			}
