@@ -109,3 +109,12 @@ function wp3ob7o_setup() {
 	add_editor_style( 'assets/css/typography.css' );
 }
 add_action( 'after_setup_theme', 'wp3ob7o_setup' );
+
+/**
+ * Output skip-to-content link via wp_body_open.
+ * This is the canonical WordPress approach for skip links in block themes.
+ */
+function wp3ob7o_skip_link() {
+	echo '<a class="skip-to-content" href="#main-content">' . esc_html__( 'Skip to content', 'wp3ob7o' ) . '</a>';
+}
+add_action( 'wp_body_open', 'wp3ob7o_skip_link' );
